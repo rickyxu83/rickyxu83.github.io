@@ -313,6 +313,17 @@ h1 {
   margin-top: 10px;
 }
 
+.guide-summary-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.guide-summary-actions .button {
+  margin-top: 0;
+}
+
 .guide-summary-points {
   display: grid;
   gap: 14px;
@@ -605,10 +616,149 @@ h1 {
   font-size: 14px;
 }
 
+/* Preview1 Workflow Guide */
+.workflow-page {
+  background:
+    radial-gradient(circle at 12% 10%, rgba(36, 87, 197, 0.12), transparent 28%),
+    radial-gradient(circle at 86% 12%, rgba(15, 159, 135, 0.12), transparent 26%),
+    var(--bg);
+}
+
+.workflow-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 0.92fr) minmax(360px, 0.78fr);
+  gap: 44px;
+  align-items: center;
+  width: min(1120px, calc(100% - 48px));
+  margin: 0 auto;
+  padding: 76px 0 56px;
+}
+
+.workflow-hero h1 {
+  font-size: clamp(42px, 5.4vw, 64px);
+}
+
+.workflow-hero-panel {
+  display: grid;
+  gap: 14px;
+  padding: 28px;
+  background: rgba(255, 255, 255, 0.76);
+  border: 1px solid rgba(217, 225, 234, 0.8);
+  border-radius: 18px;
+  box-shadow: 0 24px 72px rgba(24, 32, 47, 0.12);
+  backdrop-filter: blur(18px);
+}
+
+.workflow-hero-panel span {
+  display: flex;
+  align-items: center;
+  min-height: 52px;
+  padding: 0 18px;
+  background: linear-gradient(135deg, #ffffff, #eef4ff);
+  border: 1px solid #dbe6ff;
+  border-radius: 14px;
+  color: var(--primary-dark);
+  font-weight: 800;
+}
+
+.workflow-entry-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.workflow-entry-card {
+  min-height: 240px;
+  padding: 28px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  box-shadow: 0 18px 52px rgba(24, 32, 47, 0.08);
+}
+
+.workflow-entry-card span {
+  display: inline-flex;
+  margin-bottom: 22px;
+  padding: 5px 12px;
+  border-radius: 999px;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.workflow-entry-card h3 {
+  margin-bottom: 14px;
+  font-size: 28px;
+  line-height: 1.2;
+}
+
+.workflow-entry-card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 16px;
+}
+
+.workflow-entry-card.accent-blue span {
+  background: #2563eb;
+}
+
+.workflow-entry-card.accent-teal span {
+  background: #0f9f87;
+}
+
+.workflow-entry-card.accent-violet span {
+  background: #7c3aed;
+}
+
+.workflow-timeline {
+  display: grid;
+  gap: 18px;
+}
+
+.workflow-timeline article {
+  display: grid;
+  grid-template-columns: 58px minmax(0, 1fr);
+  gap: 18px;
+  align-items: start;
+  padding: 24px;
+  background: rgba(255, 255, 255, 0.86);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  box-shadow: 0 14px 42px rgba(24, 32, 47, 0.07);
+}
+
+.workflow-timeline span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  background: var(--primary);
+  color: #ffffff;
+  font-weight: 900;
+}
+
+.workflow-timeline h3 {
+  margin-bottom: 8px;
+  font-size: 22px;
+  line-height: 1.3;
+}
+
+.workflow-timeline p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.workflow-team-card {
+  align-items: start;
+}
+
 /* Responsive Design */
 @media (max-width: 1024px) {
   .feature-grid,
-  .guide-grid {
+  .guide-grid,
+  .workflow-entry-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
@@ -629,18 +779,21 @@ h1 {
   }
 
   .guide-hero,
+  .workflow-hero,
   .guide-step,
   .guide-summary-card {
     grid-template-columns: 1fr;
   }
 
-  .guide-hero {
+  .guide-hero,
+  .workflow-hero {
     padding-top: 56px;
   }
 
   .feature-grid,
   .screenshot-grid,
-  .guide-grid {
+  .guide-grid,
+  .workflow-entry-grid {
     grid-template-columns: 1fr;
   }
 
@@ -664,6 +817,7 @@ h1 {
   .nav,
   .hero,
   .guide-hero,
+  .workflow-hero,
   .section,
   .footer {
     width: min(100% - 32px, 1120px);
@@ -695,6 +849,19 @@ h1 {
 
   .guide-step {
     padding: 22px;
+  }
+
+  .workflow-hero-panel,
+  .workflow-entry-card {
+    padding: 22px;
+  }
+
+  .workflow-entry-card {
+    min-height: 0;
+  }
+
+  .workflow-timeline article {
+    grid-template-columns: 1fr;
   }
 
   .step-copy h3 {

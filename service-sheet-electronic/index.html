@@ -34,6 +34,7 @@
           <div class="hero-actions">
             <a class="button primary" href="#screenshots">查看界面</a>
             <a class="button secondary" href="./engineer-guide.html">工程师使用说明</a>
+            <a class="button secondary" href="./engineer-preview1-workflow.html">Preview1 填单说明</a>
             <a class="button secondary" href="#updates">查看更新</a>
           </div>
         </div>
@@ -128,7 +129,10 @@
             <p>
               说明页按实际使用顺序整理登录、查看记录、新建服务表、客户签名、分享预览、月报导出和离线草稿等步骤，适合发给工程师或测试同事逐项核对。
             </p>
-            <a class="button primary" href="./engineer-guide.html">打开工程师说明</a>
+            <div class="guide-summary-actions">
+              <a class="button primary" href="./engineer-guide.html">打开工程师说明</a>
+              <a class="button secondary" href="./engineer-preview1-workflow.html">打开 Preview1 填单说明</a>
+            </div>
           </div>
           <div class="guide-summary-points">
             <article>
@@ -154,14 +158,34 @@
         </div>
         <div class="timeline">
           <article>
+            <span>2026-05-26 · 正式域名</span>
+            <h3>正式与预览入口统一迁移到 tinypanel.de</h3>
+            <p>管理端、工程师端以及 `/preview1`、`/preview2` 预览入口现已统一切到 `tinypanel.de` 域名体系，原有 API 代理、静态回退和导出访问路径保持不变。</p>
+          </article>
+          <article>
+            <span>2026-05-26 · 协同填写</span>
+            <h3>协同服务内容按工程师分段填写</h3>
+            <p>现场和远程服务都支持本人、协同工程师和共同内容分段记录；协同工程师还没填写本人内容时，服务记录卡片会显示带呼吸感叹号的 `New` 提醒，编辑历史服务单时也会把旧格式里的“工程师姓名：内容”自动拆回对应工程师框。</p>
+          </article>
+          <article>
+            <span>2026-05-25 · Preview1</span>
+            <h3>预览版服务表补齐离线草稿和待同步队列</h3>
+            <p>Preview1 工程师端新建服务表现在会真实显示自动保存倒计时和离线队列数量，断网提交会先进入待同步队列；在线刷新一次后，浏览器会缓存当前页面资源，便于弱网或离线时继续打开已访问页面。</p>
+          </article>
+          <article>
+            <span>2026-05-25 · Preview1</span>
+            <h3>客户签名和浏览器缓存兜底更接近正式使用</h3>
+            <p>Preview1 的客户签名区已支持手写和复用最近历史签名；如果 Safari 等浏览器本机缓存写满，系统会优先清理旧缓存，仍写不进去时也不会阻断页面在线读取和填写。</p>
+          </article>
+          <article>
             <span>2026-05-25 · 工程师端</span>
             <h3>服务表补充外勤行程时间</h3>
             <p>正式工程师端的新建/修改服务表将“出发时间”“返抵时间”收进可选区块，适合加班或外勤返程记录；导出时未填写就不显示空列，填写后才随服务表保留。</p>
           </article>
           <article>
             <span>2026-05-24 · 正式入口</span>
-            <h3>工程师登录页可切换版本</h3>
-            <p>正式和预览入口统一显示为“正式版 / Preview1（仅视觉预览） / Preview2(仅视觉预览)”，并仅保留在登录页；进入预览业务页后不再显示悬浮版本切换。</p>
+            <h3>登录页可切换版本</h3>
+            <p>管理端正式登录页的预览入口恢复显示为“正式版 / Preview1（仅视觉预览） / Preview2(仅视觉预览)”，和预览说明文案保持一致。</p>
           </article>
           <article>
             <span>2026-05-24 · Preview</span>
@@ -253,7 +277,7 @@
     </main>
 
     <footer class="footer">
-      <p>技服表电子化项目 · 当前版本 26.525.1001</p>
+      <p>技服表电子化项目 · 当前版本 26.526.1004</p>
     </footer>
   </body>
 </html>

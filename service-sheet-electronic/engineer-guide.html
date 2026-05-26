@@ -1,0 +1,388 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="技服表电子化工程师端图文使用说明，覆盖登录、查看任务、填写服务表、客户签名、分享、月报和个人设置。"
+    />
+    <title>工程师端图文使用说明 - 技服表电子化</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body class="guide-page">
+    <header class="site-header">
+      <nav class="nav" aria-label="主导航">
+        <a class="brand" href="./index.html">技服表电子化</a>
+        <div class="nav-links">
+          <a href="./index.html">项目首页</a>
+          <a href="./engineer-preview1-workflow.html">Preview1 填单</a>
+          <a href="#accounts">账号</a>
+          <a href="#workflow">操作流程</a>
+          <a href="#monthly">月报</a>
+          <a href="#tips">注意事项</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="guide-hero">
+        <div>
+          <p class="eyebrow">Engineer Guide</p>
+          <h1>工程师端图文使用说明</h1>
+          <p class="lead">按实际工作顺序整理：登录、查看服务任务、填写服务表、客户签名留底、导出月报和维护个人资料。</p>
+          <div class="hero-actions">
+            <a class="button primary" href="#workflow">开始阅读</a>
+            <a class="button secondary" href="./engineer-preview1-workflow.html">Preview1 填单说明</a>
+            <a class="button secondary" href="https://eng.tinypanel.de/">打开工程师端</a>
+          </div>
+        </div>
+        <figure class="hero-media">
+          <img src="./assets/engineer-task-list.png" alt="工程师端服务记录列表" />
+        </figure>
+      </section>
+
+      <section class="guide-summary section">
+        <div class="section-heading">
+          <p class="eyebrow">Before Start</p>
+          <h2>使用前准备</h2>
+        </div>
+        <div class="feature-grid guide-grid">
+          <article class="feature-card">
+            <h3>账号</h3>
+            <p>使用管理员分配的工程师账号登录工程师端。账号对应个人服务记录、签名和月报数据。</p>
+          </article>
+          <article class="feature-card">
+            <h3>浏览器</h3>
+            <p>建议使用手机浏览器或电脑新版 Chrome、Edge、Safari。现场签名和系统分享在手机上体验更完整。</p>
+          </article>
+          <article class="feature-card">
+            <h3>填写原则</h3>
+            <p>服务内容、处理记录和客户签名应在服务完成后及时补齐，避免月报和服务表导出出现空白。</p>
+          </article>
+          <article class="feature-card">
+            <h3>离线能力</h3>
+            <p>工程师端已支持安装到手机桌面并在弱网场景下离线打开缓存页面、查看已访问记录、保存本机草稿，并把离线提交的服务表先放进待同步队列，恢复网络后再自动补传。</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="accounts" class="section">
+        <div class="section-heading">
+          <p class="eyebrow">Login</p>
+          <h2>登录地址和工程师账号</h2>
+          <p>工程师统一从工程师端入口登录。账号对应个人服务记录、客户签名、服务表导出和个人月报。</p>
+        </div>
+        <div class="guide-panel">
+          <div class="guide-callout">
+            <strong>工程师端登录地址</strong>
+            <a href="https://eng.tinypanel.de/">https://eng.tinypanel.de/</a>
+          </div>
+          <div class="table-wrap">
+            <table class="guide-table">
+              <thead>
+                <tr>
+                  <th>姓名</th>
+                  <th>账号名称</th>
+                  <th>角色</th>
+                  <th>说明</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>吴佳</td>
+                  <td><code>scott</code></td>
+                  <td>工程师</td>
+                  <td>用于登录工程师端、查看本人记录和导出本人月报。</td>
+                </tr>
+                <tr>
+                  <td>周诚</td>
+                  <td><code>zhou</code></td>
+                  <td>工程师</td>
+                  <td>用于登录工程师端、查看本人记录和导出本人月报。</td>
+                </tr>
+                <tr>
+                  <td>陈炫辅</td>
+                  <td><code>shiuan</code></td>
+                  <td>工程师</td>
+                  <td>用于登录工程师端、查看本人记录和导出本人月报。</td>
+                </tr>
+                <tr>
+                  <td>徐坚</td>
+                  <td><code>ricky</code></td>
+                  <td>工程师</td>
+                  <td>用于登录工程师端、查看本人记录和导出本人月报。</td>
+                </tr>
+                <tr>
+                  <td>严子良</td>
+                  <td><code>adoflo</code></td>
+                  <td>工程师</td>
+                  <td>用于登录工程师端、查看本人记录和导出本人月报。</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="guide-note">初始密码或重置密码请向管理员确认；如果试运行环境沿用初始化数据，工程师账号通常使用统一初始密码。</p>
+        </div>
+      </section>
+
+      <section id="workflow" class="section">
+        <div class="section-heading">
+          <p class="eyebrow">Daily Workflow</p>
+          <h2>日常操作流程</h2>
+        </div>
+
+        <div class="guide-steps">
+          <article class="guide-step">
+            <div class="step-copy">
+              <span class="step-index">01</span>
+              <h3>登录工程师端</h3>
+              <p>进入工程师端网址后，输入工程师账号和密码登录。登录后顶部会显示当前页面标题，底部导航用于切换主要功能。</p>
+              <ul>
+                <li>记录：查看自己的服务记录和任务。</li>
+                <li>新建：主动新增一张服务表。</li>
+                <li>月报：查看和导出个人月报。</li>
+                <li>我的：维护个人资料和签名。</li>
+              </ul>
+            </div>
+            <figure>
+              <img src="./assets/engineer-login.png" alt="工程师端登录页面" />
+              <figcaption>登录页提供主题切换和简繁切换入口。</figcaption>
+            </figure>
+          </article>
+
+          <article class="guide-step">
+            <div class="step-copy">
+              <span class="step-index">02</span>
+              <h3>查看服务记录</h3>
+              <p>登录后默认进入服务记录列表。每条记录展示客户、服务类型、时间和状态，点击记录可以进入详情或继续填写。</p>
+              <ul>
+                <li>本人参与过或已提交过的服务记录会出现在列表中。</li>
+                <li>已提交的服务记录可继续查看固定版式内容。</li>
+                <li>需要新增临时服务时，点击底部“新建”。</li>
+              </ul>
+            </div>
+            <figure>
+              <img src="./assets/engineer-task-list.png" alt="工程师端服务记录列表" />
+              <figcaption>服务记录列表用于快速进入详情、编辑和历史留底。</figcaption>
+            </figure>
+          </article>
+
+          <article class="guide-step">
+            <div class="step-copy">
+              <span class="step-index">03</span>
+              <h3>查看服务记录详情</h3>
+              <p>服务记录详情页展示客户、联系人、地址、设备和服务内容。服务前可用于确认现场信息，服务后可进入填写或补充处理记录。</p>
+              <ul>
+                <li>检查客户名称、联系人和电话是否正确。</li>
+                <li>确认服务类型是现场服务还是远程服务。</li>
+                <li>如信息不完整，可在填写服务表时补充关键内容。</li>
+              </ul>
+            </div>
+            <figure>
+              <img src="./assets/engineer-task-detail.png" alt="工程师端服务记录详情页面" />
+              <figcaption>服务记录详情集中展示本次服务的基础信息。</figcaption>
+            </figure>
+          </article>
+
+          <article class="guide-step">
+            <div class="step-copy">
+              <span class="step-index">04</span>
+              <h3>新建或填写服务表</h3>
+              <p>点击“新建”可以主动新增服务表，也可以从已有服务记录进入填写。系统会按现场服务和远程服务展示不同字段。</p>
+              <ul>
+                <li>现场服务：填写客户、地址、联系人、设备、到达/完成时间、服务内容和现场处理记录。</li>
+                <li>新建服务表时，“客户名称”会先列出本人常用的 10 个客户，并自动合并重复客户；点击即可快速带入客户、联系人、地址和设备。</li>
+                <li>直接输入关键字时，系统会先在已有客户资料里搜索；只有点击右侧“定位”按钮时，才会继续查找附近公司或地图候选。顶部在线/离线圆点会持续闪烁提示当前状态。</li>
+                <li>后续再为同一客户填写服务表时，系统会优先匹配已有客户资料，减少重复输入和名称不一致。</li>
+                <li>远程服务：填写专案/产品、远程类别、工作内容和处理结果。</li>
+                <li>到达时间和完成时间会默认带入当前时间，可按实际情况调整。</li>
+              </ul>
+            </div>
+            <figure>
+              <img src="./assets/engineer-new-sheet.png" alt="工程师端新建服务表页面" />
+              <figcaption>新建服务表页面按业务场景收集服务信息。</figcaption>
+            </figure>
+          </article>
+
+          <article class="guide-step">
+            <div class="step-copy">
+              <span class="step-index">05</span>
+              <h3>客户签名与分享留底</h3>
+              <p>现场服务完成后，请让客户在签名区域手写确认。提交后可预览固定版式服务表，再分享给客户留底。</p>
+              <ul>
+                <li>同一客户可复用最近一次历史签名，减少重复手写。</li>
+                <li>分享前先预览，确认客户、内容和签名无误。</li>
+                <li>手机浏览器支持时可直接调起系统分享。</li>
+              </ul>
+            </div>
+            <figure>
+              <img src="./assets/engineer-share-preview.png" alt="服务表分享预览页面" />
+              <figcaption>固定版式预览用于确认交付给客户的服务表效果。</figcaption>
+            </figure>
+          </article>
+        </div>
+      </section>
+
+      <section id="monthly" class="section">
+        <div class="section-heading">
+          <p class="eyebrow">Monthly Report</p>
+          <h2>个人月报</h2>
+        </div>
+        <div class="guide-steps compact">
+          <article class="guide-step">
+            <div class="step-copy">
+              <span class="step-index">06</span>
+              <h3>预览和导出月报</h3>
+              <p>进入“月报”后选择日期段，系统会汇总该期间的现场服务、远程服务和手动月报条目，可导出 Excel。</p>
+              <ul>
+                <li>服务记录会自动进入月报。</li>
+                <li>学习研究、内部会议、文档整理、培训等内部工作可手动新增。</li>
+                <li>导出的 Excel 包含 logo、表头、边框、换行、备注和服务表链接。</li>
+              </ul>
+            </div>
+            <figure>
+              <img src="./assets/engineer-timesheet.png" alt="工程师端月报页面" />
+              <figcaption>月报页面支持日期段筛选、手动条目和 Excel 导出。</figcaption>
+            </figure>
+          </article>
+
+          <article class="guide-step">
+            <div class="step-copy">
+              <span class="step-index">07</span>
+              <h3>维护个人资料</h3>
+              <p>进入“我的”可以查看当前账号信息，并维护个人签名。个人签名用于工程师确认区域。</p>
+              <ul>
+                <li>签名应保持清晰，避免过小或断笔。</li>
+                <li>账号姓名会用于服务表和月报中的填表人。</li>
+                <li>如账号信息错误，请联系管理员调整。</li>
+              </ul>
+            </div>
+            <figure>
+              <img src="./assets/engineer-profile.png" alt="工程师端我的页面" />
+              <figcaption>个人页用于维护账号和签名信息。</figcaption>
+            </figure>
+          </article>
+        </div>
+      </section>
+
+      <section id="tips" class="section updates">
+        <div class="section-heading">
+          <p class="eyebrow">Tips</p>
+          <h2>填写注意事项</h2>
+        </div>
+        <div class="timeline guide-tips">
+          <article>
+            <span>01</span>
+            <div>
+              <h3>工作内容要能说明实际交付</h3>
+              <p>建议写清检查、处理、验证和交付结果，避免只写“处理完成”“已检查”等过短描述。表单里带红色星号的字段是必填项，提交前要全部补齐。</p>
+            </div>
+          </article>
+          <article>
+            <span>02</span>
+            <div>
+              <h3>客户和联系人尽量补全</h3>
+              <p>客户名称、客户地址、联系人和电话会进入服务表留底，也会帮助管理端沉淀客户资料；第一次服务建议配合 GPS/地图候选完成客户资料规范化。</p>
+            </div>
+          </article>
+          <article>
+            <span>03</span>
+            <div>
+              <h3>现场服务完成后及时签名</h3>
+              <p>客户签名是服务确认的重要凭证，建议在现场完成服务表确认和分享。</p>
+            </div>
+          </article>
+          <article>
+            <span>04</span>
+            <div>
+              <h3>月报手动条目只用于内部工作</h3>
+              <p>培训、会议、学习研究等不生成客户服务表，也不会进入管理端服务记录列表。</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="offline-test" class="section">
+        <div class="section-heading">
+          <p class="eyebrow">Offline Test</p>
+          <h2>离线功能测试步骤</h2>
+          <p>下面步骤适合交给工程师或测试同事直接执行，用于验证工程师端在 iPhone 和 Android 手机上的离线能力是否正常。</p>
+        </div>
+
+        <div class="guide-steps compact">
+          <article class="guide-step">
+            <div class="step-copy">
+              <span class="step-index">iOS</span>
+              <h3>iPhone / iPad（Safari 加入主屏幕）</h3>
+              <ol>
+                <li>确保设备联网，使用 Safari 打开 <a href="https://eng.tinypanel.de/">工程师端</a>。</li>
+                <li>使用工程师账号正常登录一次。</li>
+                <li>依次打开“记录列表”、“任意一条服务记录详情”和“新建服务表”至少各一次，让页面和数据先进入本机缓存。</li>
+                <li>停留约 10 到 20 秒，再通过 Safari 分享菜单执行“加入主屏幕”。</li>
+                <li>从桌面图标打开一次，确认可以正常进入应用。</li>
+                <li>打开飞行模式，或同时关闭 Wi-Fi 与蜂窝网络。</li>
+                <li>再次从桌面图标打开，检查是否仍能进入应用。</li>
+                <li>确认顶部状态标签显示“离线”。</li>
+                <li>确认已访问过的任务列表和详情页仍可打开。</li>
+                <li>进入“新建服务表”，填写部分内容后直接关闭应用，再次打开同一页面，确认草稿可恢复。</li>
+                <li>如需记录加班外勤，可在“时间与确认”中点击“填写加班/外勤行程时间（可选）”，展开后填写“出发时间”和“返抵时间”；不填写也不影响提交，导出时也不会显示空列。</li>
+              </ol>
+            </div>
+          </article>
+
+          <article class="guide-step">
+            <div class="step-copy">
+              <span class="step-index">Preview</span>
+              <h3>Figma MCP 工程师端预览</h3>
+              <ol>
+                <li>预览源码位于 <code>figma-mcp-preview/frontend-engineer</code>，用于验证新版响应式服务表方向。</li>
+                <li>该预览依据 Figma MCP 文件生成：<a href="https://www.figma.com/design/E3PFcgsjk3J2yGJ1IiSXmx">技服表电子化 Figma MCP Preview</a>。</li>
+                <li>当前覆盖登录、新建/修改服务表、任务、服务记录详情、分享预览、月报和个人页；其中月报包含日期筛选、统计、明细和导出，个人页包含修改密码和手写签名保存。</li>
+                <li>预览前端已按正式字段语义接入测试写入，可提交自填服务记录；迁移正式服务器前仍需统一核对测试数据。</li>
+                <li>Preview1 工程师端离线测试前，需要先在线打开并刷新一次 <code>https://eng.tinypanel.de/preview1/service-sheets/new</code>，等待新版离线包缓存当前 JS/CSS；之后再断网验证页面打开、本机草稿、自动保存倒计时、待同步队列和客户签名复用。</li>
+              </ol>
+            </div>
+          </article>
+
+          <article class="guide-step">
+            <div class="step-copy">
+              <span class="step-index">Android</span>
+              <h3>Android（Chrome 安装到桌面）</h3>
+              <ol>
+                <li>确保设备联网，使用 Chrome 打开 <a href="https://eng.tinypanel.de/">工程师端</a>。</li>
+                <li>使用工程师账号正常登录一次。</li>
+                <li>依次打开“记录列表”、“任意一条服务记录详情”和“新建服务表”至少各一次，让页面和数据先进入本机缓存。</li>
+                <li>通过 Chrome 菜单执行“安装应用”或“添加到主屏幕”。</li>
+                <li>从桌面图标打开一次，确认可以正常进入应用。</li>
+                <li>关闭 Wi-Fi 与移动网络，或直接打开飞行模式。</li>
+                <li>再次从桌面图标打开，检查是否仍能进入应用。</li>
+                <li>确认顶部状态标签显示“离线”。</li>
+                <li>确认已访问过的任务列表和详情页仍可打开。</li>
+                <li>进入“新建服务表”，填写部分内容后直接关闭应用，再次打开同一页面，确认草稿可恢复。</li>
+              </ol>
+            </div>
+          </article>
+
+          <article class="guide-step">
+            <div class="step-copy">
+              <span class="step-index">核对</span>
+              <h3>测试通过标准</h3>
+              <ul>
+                <li>离线后应用不会白屏。</li>
+                <li>顶部状态会显示“离线”。</li>
+                <li>已访问过的列表、详情和新建页可以继续打开。</li>
+                <li>服务表草稿在关闭应用后仍可恢复。</li>
+                <li>恢复联网后可继续正常进入系统并提交服务记录。</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>技服表电子化项目 · 工程师端图文使用说明 · 当前版本 26.526.1004</p>
+    </footer>
+  </body>
+</html>
